@@ -1,4 +1,8 @@
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
+import { ContactFormEmail } from "@/emails/contact-form-email";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
@@ -13,11 +17,18 @@ export async function POST(request: Request) {
       );
     }
 
-    // Send email using Resend
-    const resendApiKey = process.env.RESEND_API_KEY;
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return NextResponse.json(
+        { error: "Invalid email format" },
+        { status: 400 }
+      );
+    }
+
     const recipientEmail = process.env.CONTACT_EMAIL || "your-email@example.com";
 
-    if (!resendApiKey) {
+    if (!process.env.RESEND_API_KEY) {
       console.error("RESEND_API_KEY is not configured");
       return NextResponse.json(
         { error: "Email service not configured" },
@@ -25,38 +36,32 @@ export async function POST(request: Request) {
       );
     }
 
-    const emailResponse = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${resendApiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: "Deed Shield <onboarding@resend.dev>",
-        to: [recipientEmail],
-        subject: `New Contact Form Submission from ${name}`,
-        html: `
-          <h2>New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Company:</strong> ${company}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
-          <h3>Comments:</h3>
-          <p>${comments || "No comments provided"}</p>
-        `,
+    // Send email using Resend with React email template
+    const { data, error } = await resend.emails.send({
+      from: "Deed Shield <onboarding@resend.dev>",
+      to: [recipientEmail],
+      subject: `New Contact Form Submission from ${name}`,
+      react: ContactFormEmail({
+        name,
+        company,
+        email,
+        phone: phone || "Not provided",
+        message: comments || "No message provided",
       }),
     });
 
-    if (!emailResponse.ok) {
-      const errorData = await emailResponse.json();
-      console.error("Resend API error:", errorData);
+    if (error) {
+      console.error("Resend API error:", error);
       return NextResponse.json(
         { error: "Failed to send email" },
         { status: 500 }
       );
     }
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({
+      success: true,
+      messageId: data?.id
+    });
   } catch (error) {
     console.error("Contact form error:", error);
     return NextResponse.json(
@@ -65,3 +70,4 @@ export async function POST(request: Request) {
     );
   }
 }
+
