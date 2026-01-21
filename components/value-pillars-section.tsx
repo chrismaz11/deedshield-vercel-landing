@@ -3,24 +3,24 @@ import { Scale, FileCheck, Zap } from "lucide-react";
 const pillars = [
   {
     icon: Scale,
-    title: "Regulatory Compliance",
-    subtitle: "Protecting the Recorder",
+    title: "Workflow-Level Risk Reduction",
+    subtitle: "For title operations and recording workflows",
     description:
-      'Deed Shield provides Recorders with an objective, technical "pass/fail" signal rooted in data integrity, allowing them to filter suspicious filings without violating their ministerial duty to record.',
+      "Deed Shield provides an independent integrity signal before documents are recorded. This enables earlier detection of anomalies and stronger internal documentation—without making legal determinations or replacing existing review processes.",
   },
   {
     icon: FileCheck,
-    title: "Liability Defense",
-    subtitle: "Immutable Audit Trails",
+    title: "Auditable Due Diligence",
+    subtitle: "Permanent verification records",
     description:
-      'Every transaction generates a cryptographic "Verification Receipt" anchored to a public ledger (e.g., Polygon). This provides Title Agencies with permanent, third-party proof of due diligence.',
+      "Every transaction generates a cryptographic verification receipt. This tamper-evident artifact provides title agencies and recorders with permanent, third-party proof of pre-recording review—useful for compliance and liability defense.",
   },
   {
     icon: Zap,
     title: "Operational Continuity",
-    subtitle: "Zero-Friction Integration",
+    subtitle: "Integrates with existing systems",
     description:
-      "Designed as an overlay, not a replacement. Deed Shield integrates with SoftPro, ResWare, and major eRecording gateways, requiring no changes to your existing production software.",
+      "Deed Shield is designed as an overlay for title and recording workflows. Integration with SoftPro, ResWare, and major eRecording gateways requires no changes to production software or staff retraining.",
   },
 ];
 
@@ -54,6 +54,32 @@ export function ValuePillarsSection() {
               </p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-16 rounded-lg border border-border bg-muted/50 p-8">
+          <h3 className="text-lg font-semibold text-foreground">
+            What Deed Shield Does Not Do
+          </h3>
+          <div className="mt-6 grid gap-4 sm:grid-cols-3">
+            <div className="flex gap-3">
+              <div className="mt-0.5 h-2 w-2 flex-shrink-0 rounded-full bg-foreground/40" />
+              <p className="text-sm text-muted-foreground">
+                Does not replace legal review or title insurance
+              </p>
+            </div>
+            <div className="flex gap-3">
+              <div className="mt-0.5 h-2 w-2 flex-shrink-0 rounded-full bg-foreground/40" />
+              <p className="text-sm text-muted-foreground">
+                Does not alter or store public records
+              </p>
+            </div>
+            <div className="flex gap-3">
+              <div className="mt-0.5 h-2 w-2 flex-shrink-0 rounded-full bg-foreground/40" />
+              <p className="text-sm text-muted-foreground">
+                Final authority remains with recording entity
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

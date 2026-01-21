@@ -9,24 +9,24 @@ import {
 
 const faqs = [
   {
-    question: "Does Deed Shield replace the Notary?",
+    question: "Does Deed Shield replace notaries, title insurance, or recorders?",
     answer:
-      "No. The Notary performs their standard duties. Deed Shield validates the metadata and operator attestation after notarization but before recording.",
+      "No. Deed Shield is a pre-recording verification checkpoint for title operations. Notaries perform standard duties, title insurance remains in place, and county recorders retain final recording authority. Deed Shield provides an independent integrity signal—not a replacement for existing processes.",
   },
   {
-    question: 'Is the "Verification Receipt" legally binding?',
+    question: "What does a PASS or FLAG signal mean operationally?",
     answer:
-      'A "PASS" result is a technical verification of data integrity and policy compliance. It does not constitute a legal opinion on title validity. The County Recorder remains the final legal authority.',
+      "A PASS indicates document integrity and metadata consistency based on cryptographic validation and registry cross-checks. A FLAG alerts operations to a potential anomaly for internal review. Neither constitutes a legal determination—Deed Shield outputs an integrity signal, not a legal opinion.",
   },
   {
-    question: "What happens if a document is flagged?",
+    question: "What happens when a document is flagged?",
     answer:
-      'In "Watch & Verify" mode, a flag alerts your risk management team without blocking the transaction, allowing you to establish a baseline for fraud attempts vs. clerical errors.',
+      "Flagged documents are routed to internal compliance or operations for review. The pilot operates in observation mode: flags provide visibility without blocking transactions, allowing participants to assess signal accuracy and establish baselines for anomaly types (fraud vs. clerical errors).",
   },
   {
-    question: "How does the pilot program work?",
+    question: "How does the 60-day pilot work for title operations?",
     answer:
-      'We offer a 60-Day "Watch & Verify" Pilot program. This allows you to validate the efficacy of cryptographic pre-checks in your live environment with zero operational risk before full deployment.',
+      "The pilot applies pre-recording verification to a limited transaction set in live workflows. Participants receive integrity signals, audit documentation, and an end-of-pilot findings report. The scope is time-boxed and does not require system replacement, staff retraining, or long-term commitment.",
   },
 ];
 

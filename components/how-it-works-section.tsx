@@ -4,30 +4,30 @@ const steps = [
   {
     step: "01",
     icon: FileText,
-    title: "Ingest & Hash",
+    title: "Document Fingerprinting",
     description:
-      "The operator uploads the closing deed. The system generates a cryptographic hash (digital fingerprint) of the file. Crucially, Deed Shield never stores the document contents.",
+      "Title operations upload the closing deed. Deed Shield generates a cryptographic hash—a unique digital fingerprint—without storing document contents. Privacy is preserved.",
   },
   {
     step: "02",
     icon: Link2,
     title: "Metadata Binding",
     description:
-      "Key data (Jurisdiction, Doc Type, Notary ID) is cryptographically bound to the document hash, creating an immutable record of the transaction metadata.",
+      "Key transaction data (jurisdiction, document type, notary ID) is cryptographically bound to the hash, creating an immutable audit reference for pre-recording review.",
   },
   {
     step: "03",
     icon: ShieldCheck,
-    title: "Verification Check",
+    title: "Integrity Signal",
     description:
-      "The system cross-references the Notary ID against state indexes and validates operator attestation to ensure document integrity.",
+      "Deed Shield cross-references notary credentials against state registries and validates operator attestations. The output is a PASS or FLAG signal—not a legal determination.",
   },
   {
     step: "04",
     icon: FileCheck,
-    title: "Immutable Receipt",
+    title: "Verification Receipt",
     description:
-      'A "Verification Receipt" (JWT) is generated. This tamper-evident artifact accompanies the filing, providing the Recorder with independent proof of due diligence.',
+      "A tamper-evident receipt (JWT format) is generated and accompanies the filing. This provides recorders and title agencies with independent, auditable proof of pre-recording review.",
   },
 ];
 
@@ -37,15 +37,16 @@ export function HowItWorksSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
-            The Green Light Protocol
+            How It Works
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl text-balance">
-            Cryptographic Verification Before Submission
+            Independent Verification Before Recording
           </h2>
           <p className="mt-4 text-lg text-muted-foreground text-pretty">
-            Deed Shield acts as a middleware layer between the Closing Table and
-            the eRecording gateway. We validate the integrity of the transaction
-            before it enters the public record.
+            Deed Shield operates as a pre-recording checkpoint for title
+            operations. The system validates document integrity and generates an
+            audit artifact before submission to the recorder—without altering
+            workflows or storing documents.
           </p>
         </div>
 

@@ -14,14 +14,14 @@ export function HeroSection() {
           </div>
 
           <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance">
-            From Reactive Monitoring to Proactive Verification
+            Pre-Recording Fraud Detection for Title Operations
           </h1>
 
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground text-pretty">
-            The first pre-recording verification layer designed to secure the
-            institutional chokepoint of land records. Bridge the
-            &ldquo;ministerial gap&rdquo; without disrupting your current
-            eRecording workflow.
+            Deed Shield provides title companies and county recorders with an
+            independent integrity checkpoint before documents enter the public
+            record. Reduce exposure to post-recording fraud, unwind costs, and
+            liability—without replacing existing systems or workflows.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

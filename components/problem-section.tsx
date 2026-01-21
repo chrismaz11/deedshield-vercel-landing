@@ -3,21 +3,21 @@ import { AlertTriangle, DollarSign, Scale } from "lucide-react";
 const problems = [
   {
     icon: AlertTriangle,
-    title: "The Vulnerability",
+    title: "Post-Recording Risk Exposure",
     description:
-      "Bad actors exploit statutory limitations to inject fraudulent deeds into the public record using forged notary stamps and synthetic identities.",
+      "Fraudulent deeds using forged notary stamps and fabricated identities can enter public records undetected. For title operations, detection after recording means costly unwinding, legal liability, and disrupted closings.",
   },
   {
     icon: DollarSign,
-    title: "The Cost of Inaction",
+    title: "Rework and Legal Costs",
     description:
-      'Current "Title Lock" services are merely smoke detectors—alerting owners only after the fraud is recorded. Remediation requires "Quiet Title" actions costing over $10,000 in legal fees.',
+      "Title companies face direct exposure when fraudulent documents are recorded. Remediation requires quiet title actions often exceeding $10,000 in legal fees, plus operational delays and client relationship damage.",
   },
   {
     icon: Scale,
-    title: "The Liability Shift",
+    title: "Liability Transfer",
     description:
-      "Once recorded, the burden of fraud shifts entirely to the Title Company and the homeowner, creating significant financial and legal exposure.",
+      "Once a fraudulent document is recorded, the burden shifts to title companies and property owners. Without independent verification before recording, proving due diligence becomes significantly harder.",
   },
 ];
 
@@ -25,15 +25,26 @@ export function ProblemSection() {
   return (
     <section id="problem" className="bg-card py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl mb-16">
+          <blockquote className="border-l-4 border-primary bg-muted/50 p-6 italic text-foreground/90 leading-relaxed">
+            <p className="text-pretty">
+              &ldquo;Fraudsters are stealing land out from under owners… it begins when a real estate agent gets a solicitation from a fake property owner wanting to sell their vacant lot in a rural community… meanwhile, the real property owner has no idea their land has just been sold out from under them.&rdquo;
+            </p>
+            <footer className="mt-4 text-sm font-medium not-italic text-muted-foreground">
+              — FBI Newark field office press release
+            </footer>
+          </blockquote>
+        </div>
+
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl text-balance">
-            Why the County Recorder Cannot Be Your Gatekeeper
+            The Ministerial Duty Gap
           </h2>
           <p className="mt-4 text-lg text-muted-foreground text-pretty">
-            Under current statutory frameworks, Recorders operate under strict
-            &ldquo;ministerial duties.&rdquo; By law, they must record any
-            document that meets formatting requirements and fee payments,
-            regardless of the underlying validity of the legal claims.
+            County Recorders operate under ministerial duty: they must record
+            documents that meet formatting and fee requirements, regardless of
+            underlying validity. For title operations, this means no upstream
+            fraud filter before documents enter the public record.
           </p>
         </div>
 

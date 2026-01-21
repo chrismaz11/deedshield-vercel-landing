@@ -9,17 +9,17 @@ import {
 import { ContactForm } from "@/components/contact-form";
 
 const deliverables = [
-  "Defined pilot scope and onboarding session",
-  "Verification and audit signals applied to a limited transaction set",
-  "Visibility into document integrity, metadata consistency, and anomalies",
-  "End-of-pilot findings summary suitable for internal review",
+  "Defined pilot scope and technical onboarding session",
+  "Pre-recording verification signals applied to a limited transaction set",
+  "Visibility into document integrity, metadata consistency, and flagged anomalies",
+  "End-of-pilot findings report suitable for internal stakeholder review",
 ];
 
 const outcomes = [
-  "Earlier awareness of potential issues",
-  "Stronger internal documentation when anomalies arise",
-  "Insight into workflow blind spots",
-  "Evidence to inform future fraud and risk decisions",
+  "Earlier operational awareness of integrity issues",
+  "Stronger audit documentation for compliance and liability defense",
+  "Measurable insight into workflow accuracy and blind spots",
+  "Evidence-based assessment to inform future fraud mitigation strategy",
 ];
 
 const notRequired = [
@@ -47,11 +47,11 @@ export function PilotProgramSection() {
             What the Pilot Is
           </h3>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            This 60-day paid pilot is a focused evaluation of Deed Shield in
-            real operational conditions. It is designed to assess whether
-            independent verification and audit signals can provide earlier
-            visibility and stronger documentation without changing existing
-            title or recording systems.
+            This is a paid, time-boxed, limited-scope evaluation of Deed Shield
+            in live title or recording workflows. The pilot assesses whether
+            pre-recording integrity signals improve workflow visibility,
+            strengthen audit documentation, and fit operationally—without
+            requiring system replacement or long-term commitment.
           </p>
         </div>
 
@@ -116,22 +116,25 @@ export function PilotProgramSection() {
           </h3>
           <div className="mt-4 space-y-3">
             <p className="text-muted-foreground">
-              Participants may expand, adjust, or discontinue based on findings.
+              Participants may choose to expand, adjust scope, or discontinue
+              based on measured outcomes.
             </p>
             <p className="text-muted-foreground">
-              Results may inform longer-term deployment or internal tooling
-              decisions.
+              Findings may inform broader deployment, internal process
+              improvements, or fraud mitigation strategy.
             </p>
             <p className="text-muted-foreground">
-              No exclusivity or follow-on requirement implied.
+              No exclusivity, long-term commitment, or follow-on obligation is
+              required or implied.
             </p>
           </div>
         </div>
 
         <div className="mt-16 rounded-lg border border-foreground/10 bg-primary p-8 text-center md:p-12">
           <p className="text-lg font-medium text-primary-foreground md:text-xl">
-            Early visibility is a strategic choice when the cost of inaction is
-            measured in millions.
+            When post-recording fraud costs exceed $1B annually, pre-recording
+            verification is a measurable operational decision—not a speculative
+            investment.
           </p>
           <div className="mt-8">
             <ContactForm
@@ -147,7 +150,7 @@ export function PilotProgramSection() {
             />
           </div>
           <p className="mt-4 text-sm text-primary-foreground/70">
-            No long-term commitment. Evidence-driven evaluation.
+            Paid pilot. Time-boxed scope. No long-term obligation.
           </p>
         </div>
       </div>
