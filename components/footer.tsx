@@ -3,28 +3,28 @@ import { Shield } from "lucide-react";
 
 const footerLinks = {
   Product: [
-    { label: "How It Works", href: "#how-it-works" },
-    { label: "Value Pillars", href: "#value" },
-    { label: "Integration", href: "#integration" },
-    { label: "FAQ", href: "#faq" },
+    { label: "How It Works", href: "/#how-it-works" },
+    { label: "Value Pillars", href: "/#value" },
+    { label: "Integration", href: "/#integration" },
+    { label: "FAQ", href: "/#faq" },
   ],
   Company: [
-    { label: "About", href: "#" },
-    { label: "Careers", href: "#" },
-    { label: "Contact", href: "#" },
-    { label: "Press", href: "#" },
+    { label: "About", href: "/about" },
+    { label: "Careers", href: "/careers" },
+    { label: "Contact", href: "/contact" },
+    { label: "Press", href: "/press" },
   ],
   Resources: [
-    { label: "Documentation", href: "#" },
-    { label: "API Reference", href: "#" },
-    { label: "Blog", href: "#" },
-    { label: "Support", href: "#" },
+    { label: "Documentation", href: "/documentation" },
+    { label: "API Reference", href: "/api-reference" },
+    { label: "Blog", href: "/blog" },
+    { label: "Support", href: "/support" },
   ],
   Legal: [
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
-    { label: "Compliance", href: "#" },
-    { label: "Security", href: "#" },
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Terms of Service", href: "/terms" },
+    { label: "Compliance", href: "/compliance" },
+    { label: "Security", href: "/security" },
   ],
 };
 
@@ -75,19 +75,23 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-6">
             <Link
-              href="#"
+              href="https://twitter.com/deedshield"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               Twitter
             </Link>
             <Link
-              href="#"
+              href="https://linkedin.com/company/deedshield"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               LinkedIn
             </Link>
             <Link
-              href="#"
+              href="/contact"
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               Contact
