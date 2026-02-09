@@ -10,6 +10,9 @@ import { FAQSection } from "@/components/faq-section";
 import { CTASection } from "@/components/cta-section";
 import { PilotProgramSection } from "@/components/pilot-program-section";
 import { Footer } from "@/components/footer";
+<!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/245092976.js"></script>
+<!-- End of HubSpot Embed Code -->
 
 export default function Home() {
   return (
